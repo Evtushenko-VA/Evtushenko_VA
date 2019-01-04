@@ -1,0 +1,22 @@
+//============================================================================
+// Name        : Sem-II_v-37_Evtushenko.cpp
+// Author      : Vladimir Evtushenko
+// Version     :
+// Copyright   : 
+// Description : Homework for sem. II, ZJBZ-11-17
+//============================================================================
+
+#include <iostream>
+#include <stdlib.h>
+
+#include "Tasks.h"
+
+using namespace std;
+
+int main()
+{
+	requestArraySizeTask_1();
+	displayTask_1(culcTask_1(inputArrayNumbers()));
+	return 0;
+}
+
