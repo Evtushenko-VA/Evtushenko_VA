@@ -1,0 +1,78 @@
+/*
+ * Task_1.cpp
+ *
+ *  Created on: 04.01.2019
+ *      Author: vladimir
+ */
+
+//Задача 1_37: Дан  массив A(n,n). Найти сумму всех его элементов, расположенных ниже диагонали, противоположной главной.
+
+#include <iostream>
+#include <stdlib.h>
+
+using namespace::std;
+
+
+int requestArraySizeTask_1()
+{
+	int arraySize;
+	cout << "Enter size of array A[n,n]" << endl;
+	cin >> arraySize;
+	return arraySize;
+}
+
+int inputArrayNumbers()
+{
+	srand(time(NULL));
+	int arraySize = requestArraySizeTask_1();
+	int **numericArray = new int*[arraySize];
+	for (int i = 0; i < arraySize; i++)
+	  {
+		  numericArray[i] = new int*[arraySize];
+	  }
+
+	// Заполнение массива числами от 0 до 10
+	for (int i = 0; i < arraySize; i++)
+	  {
+		  for (int j = 0; j < arraySize; j++)
+      {
+			  numericArray[i][j] = rand()%10;
+		  }
+	}
+	int** arrayAdress = &numericArray;
+	for (int i = 0; i < arraySize(); i++)
+	{
+		delete [] numericArray[i];
+	}
+	delete [] numericArray;
+	return arrayAdress;
+}
+
+int culсTask_1(int** A)
+{
+
+	// Объявление служебных переменных и массива
+	int j,i,summ = 0;
+	int n = requestArraySizeTask_1();
+	**A = new int* [n];
+	for (i = 0; i < n; i++)
+	{
+		A[i] = new int[n];
+	}
+
+	**A = inputArrayNumbers();
+
+	//  Освобождаем память
+	for (i = 0; i < n; i++)
+	{
+		delete [] A[i];
+	}
+	delete [] A[n];
+	return summ;
+}
+
+int displayTask_1(int summ)
+{
+	cout << endl << "Amount of numbers bellow the main diagonal array A is " << summ << endl;
+	return 0;
+}
