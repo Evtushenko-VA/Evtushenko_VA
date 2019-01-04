@@ -1,0 +1,12 @@
+ * Task_1.h
+
+#ifndef TASKS_H_
+#define TASKS_H_
+
+int requestArraySizeTask_1();
+int** inputArrayNumbers();
+int culсTask_1(int** A);
+int displayTask_1();
+void Task_2();
+
+#endif /* TASKS_H_ */
